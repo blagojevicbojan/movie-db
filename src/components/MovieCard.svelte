@@ -28,7 +28,7 @@
 </style>
 
 <div class="movie-card">
-    <a href={"/movie/" + movie.id}>
+    <a sveltekit:prefetch href={"/movie/" + movie.id}>
         <img src={'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path} alt={movie.title}>
     </a>
     <div class="description">

@@ -1,5 +1,6 @@
 <script>
-    import {goto} from '$app/navigation';
+    import { goto } from '$app/navigation';
+    import { fly } from 'svelte/transition';
 
     let inputValue = '';
 
@@ -60,7 +61,7 @@
         type="text" 
     >
     {#if inputValue}
-        <button>Search</button>
+        <button in:fly={{x: 20, duration: 500}} out:fly={{x: 0, duration: 500}}>Search</button>
     {/if}       
 </form>
     
